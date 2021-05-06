@@ -1,4 +1,4 @@
-package model;
+package entidades;
 
 import java.util.Scanner;
 
@@ -54,7 +54,7 @@ public class ContaCorrente extends Conta {
 			taxaTotal = taxaTotal + (taxa * valor);
 
 			System.err.println(
-					"Saldo Atual na CONTA CORRENTE: " + this.getSaldo() + "  Taxa da transação: " + valor * taxa);
+					"Saldo Atual na CONTA CORRENTE: " + this.getSaldo() + "  Taxa da transaï¿½ï¿½o: " + valor * taxa);
 
 		}
 	}
@@ -63,7 +63,7 @@ public class ContaCorrente extends Conta {
 	void depositar(double valor) {
 
 		this.setSaldo(this.getSaldo() + valor);
-		System.err.println("Olá, " + getNomeCliente() + "! Seu saldo Atual na CONTA CORRENTE: " + this.getSaldo());
+		System.err.println("Olï¿½, " + getNomeCliente() + "! Seu saldo Atual na CONTA CORRENTE: " + this.getSaldo());
 
 	}
 
@@ -73,7 +73,7 @@ public class ContaCorrente extends Conta {
 		System.err.println(" CADASTRO DE NOVA CONTA CORRENTE\nDigite o NOME do cliente: ");
 		this.setNomeCliente(sc.nextLine());
 
-		this.setAgencia("1010-CC"); // Agencia possue número padrão
+		this.setAgencia("1010-CC"); // Agencia possue nï¿½mero padrï¿½o
 
 		this.setContaAtiva(true);
 
@@ -87,7 +87,7 @@ public class ContaCorrente extends Conta {
 		if (this.getSaldo() >= 1) {
 
 			System.err.println(
-					"Não é possível encerrar a conta! Ainda existe saldo disponível. SALDO: " + this.getSaldo());
+					"Nï¿½o ï¿½ possï¿½vel encerrar a conta! Ainda existe saldo disponï¿½vel. SALDO: " + this.getSaldo());
 
 		} else {
 

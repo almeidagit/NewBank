@@ -1,11 +1,17 @@
-package model;
+package NewBank.NewBank;
 
 import java.util.Scanner;
 
-public class Programa {
-	@SuppressWarnings("resource")
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+import entidades.ContaCorrente;
+import entidades.ContaPoupanca;
+
+
+public class App 
+{
+    @SuppressWarnings("resource")
+	public static void main( String[] args )
+    {
+    	Scanner sc = new Scanner(System.in);
 		int opcao = 1;
 
 		ContaCorrente cc1 = new ContaCorrente("1010-CC", 102030, "Maria", 500, true);
@@ -21,9 +27,9 @@ public class Programa {
 		ContaCorrente cont = new ContaCorrente(302050);
 //		REGRAS GERAIS DO BANCO
 //		
-//		SAQUES EM CONTA CORRENTE SERÃO TAXADOS EM 0,5% DIANTE DO VALOR SACADO.
-//		DEPOSITOS EM CONTA POUPANÇA TERÃO RENDIMENTO DE 0,6% SOBRE O VALOR DEPOSITADO.
-//		TRANSFERENCIAS NÃO POSSUEM TAXAS.
+//		SAQUES EM CONTA CORRENTE SERï¿½O TAXADOS EM 0,5% DIANTE DO VALOR SACADO.
+//		DEPOSITOS EM CONTA POUPANï¿½A TERï¿½O RENDIMENTO DE 0,6% SOBRE O VALOR DEPOSITADO.
+//		TRANSFERENCIAS Nï¿½O POSSUEM TAXAS.
 
 		while (opcao < 10) {
 
@@ -64,5 +70,4 @@ public class Programa {
 		} // true
 
 	}
-
 }

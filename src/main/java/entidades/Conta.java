@@ -1,4 +1,4 @@
-package model;
+package entidades;
 
 import java.util.Scanner;
 
@@ -34,13 +34,13 @@ public abstract class Conta {
 
 	abstract void fecharConta(double valor);
 
-	int escolherMenu(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4, ContaCorrente c5,
+	public int escolherMenu(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4, ContaCorrente c5,
 			ContaPoupanca p1, ContaPoupanca p2, ContaPoupanca p3, ContaPoupanca p4, ContaPoupanca p5) {
 
 		exibeBancodeDados(c1, c2, c3, c4, c5, p1, p2, p3, p4, p5);
 
 		System.out.println(
-				"\n[1] SACAR\n[2] DEPOSITAR\n[3] TRANSFERIR\n[4] ABRIR CONTA\n[5] FECHAR CONTA\n\n\nDigite sua Opção: ");
+				"\n[1] SACAR\n[2] DEPOSITAR\n[3] TRANSFERIR\n[4] ABRIR CONTA\n[5] FECHAR CONTA\n\n\nDigite sua Opï¿½ï¿½o: ");
 		int op = sc.nextInt();
 
 		return op;
@@ -65,7 +65,7 @@ public abstract class Conta {
 
 		p1.exibirDados();
 		p2.exibirDados();
-		p3.exibirDados(); // exibe dados de todas contas POUPANÇAS ativas
+		p3.exibirDados(); // exibe dados de todas contas POUPANï¿½AS ativas
 		p4.exibirDados();
 		p5.exibirDados();
 
@@ -75,12 +75,12 @@ public abstract class Conta {
 
 	}
 
-	void selecionarContaSaque(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4, ContaCorrente c5,
+	public void selecionarContaSaque(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4, ContaCorrente c5,
 			ContaPoupanca p1, ContaPoupanca p2, ContaPoupanca p3, ContaPoupanca p4, ContaPoupanca p5) {
 
 		exibeBancodeDados(c1, c2, c3, c4, c5, p1, p2, p3, p4, p5);
 
-		System.out.println("\nOpção Selecionada:     SACAR \n\nDigite o numero da Conta ");
+		System.out.println("\nOpï¿½ï¿½o Selecionada:     SACAR \n\nDigite o numero da Conta ");
 		int conta = sc.nextInt();
 
 		System.out.println("\nDigite o valor do saque ");
@@ -112,13 +112,13 @@ public abstract class Conta {
 
 	}
 
-	void selecionarContaDeposito(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
+	public void selecionarContaDeposito(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
 			ContaCorrente c5, ContaPoupanca p1, ContaPoupanca p2, ContaPoupanca p3, ContaPoupanca p4,
 			ContaPoupanca p5) {
 
 		exibeBancodeDados(c1, c2, c3, c4, c5, p1, p2, p3, p4, p5);
 
-		System.out.println("\nOpção Selecionada:     Depositar \n\nDigite o numero da Conta ");
+		System.out.println("\nOpï¿½ï¿½o Selecionada:     Depositar \n\nDigite o numero da Conta ");
 		int conta = sc.nextInt();
 
 		System.out.println("\nDigite o valor do deposito ");
@@ -149,21 +149,21 @@ public abstract class Conta {
 		}
 	}
 
-	void selecionarContaTranferir(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
+	public void selecionarContaTranferir(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
 			ContaCorrente c5, ContaPoupanca p1, ContaPoupanca p2, ContaPoupanca p3, ContaPoupanca p4,
 			ContaPoupanca p5) {
 
 		exibeBancodeDados(c1, c2, c3, c4, c5, p1, p2, p3, p4, p5);
 
-		System.out.println("\nOpção Selecionada:     Transferir \n\nDigite o numero da sua CONTA: ");
+		System.out.println("\nOpï¿½ï¿½o Selecionada:     Transferir \n\nDigite o numero da sua CONTA: ");
 		int conta = sc.nextInt();
 
-		System.out.println("\nDigite o valor da TRANSFERÊNCIA: ");
+		System.out.println("\nDigite o valor da TRANSFERï¿½NCIA: ");
 		double valorTransf = sc.nextDouble();
 
 		if (valorTransf <= 0) {
 
-			System.err.println("DIGITE UM VALOR VÁLIDO PARA TRANSFERÊNCIA!");
+			System.err.println("DIGITE UM VALOR Vï¿½LIDO PARA TRANSFERï¿½NCIA!");
 
 		} else if (c1.getNumero() == conta && c1.getSaldo() >= valorTransf) {
 
@@ -269,14 +269,14 @@ public abstract class Conta {
 
 	}
 
-	void selecionarContaAbertura(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
+	public void selecionarContaAbertura(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
 			ContaCorrente c5, ContaPoupanca p1, ContaPoupanca p2, ContaPoupanca p3, ContaPoupanca p4,
 			ContaPoupanca p5) {
 
 		exibeBancodeDados(c1, c2, c3, c4, c5, p1, p2, p3, p4, p5);
 
 		System.out.println(
-				"\nOpção Selecionada:     Abrir Conta \n\nDesejar abrir uma CONTA CORRENTE [1] ou uma CONTA POUPANÇA [2]");
+				"\nOpï¿½ï¿½o Selecionada:     Abrir Conta \n\nDesejar abrir uma CONTA CORRENTE [1] ou uma CONTA POUPANï¿½A [2]");
 		int opcaoConta = sc.nextInt();
 
 		if (c1.isContaAtiva() == false && opcaoConta == 1) {
@@ -300,18 +300,18 @@ public abstract class Conta {
 		} else if (p5.isContaAtiva() == false && opcaoConta == 2) {
 			p5.abrirConta();
 		} else {
-			System.err.println("OPÇÃO INVÁLIDA");
+			System.err.println("OPï¿½ï¿½O INVï¿½LIDA");
 		}
 
 	}
 
-	void selecionarContaEncerrar(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
+	public void selecionarContaEncerrar(ContaCorrente c1, ContaCorrente c2, ContaCorrente c3, ContaCorrente c4,
 			ContaCorrente c5, ContaPoupanca p1, ContaPoupanca p2, ContaPoupanca p3, ContaPoupanca p4,
 			ContaPoupanca p5) {
 
 		exibeBancodeDados(c1, c2, c3, c4, c5, p1, p2, p3, p4, p5);
 
-		System.out.println("\nOpção Selecionada:     Fechar Conta \n\nDigite o numero da Conta a ser ENCERRADA: ");
+		System.out.println("\nOpï¿½ï¿½o Selecionada:     Fechar Conta \n\nDigite o numero da Conta a ser ENCERRADA: ");
 		int conta = sc.nextInt();
 
 		// System.out.println("\nDigite o valor do saque ");
@@ -344,7 +344,7 @@ public abstract class Conta {
 	}
 
 	void exibirSaldo() {
-		System.out.println("Seu saldo é :" + saldo);
+		System.out.println("Seu saldo ï¿½ :" + saldo);
 	}
 
 	public String getAgencia() {

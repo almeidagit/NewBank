@@ -1,4 +1,4 @@
-package model;
+package entidades;
 
 public class ContaPoupanca extends Conta {
 
@@ -21,7 +21,7 @@ public class ContaPoupanca extends Conta {
 
 			this.setSaldo(this.getSaldo() - valor);
 
-			System.err.println("Saldo Atual na CONTA POUPANÇA: " + this.getSaldo());
+			System.err.println("Saldo Atual na CONTA POUPANï¿½A: " + this.getSaldo());
 
 		}
 
@@ -34,7 +34,7 @@ public class ContaPoupanca extends Conta {
 
 		bonusTotal = bonusTotal + ((bonus - 1) * valor);
 
-		System.err.printf("Olá, " + getNomeCliente() + "! Seu saldo Atual na CONTA POUPANÇA: " + this.getSaldo()
+		System.err.printf("Olï¿½, " + getNomeCliente() + "! Seu saldo Atual na CONTA POUPANï¿½A: " + this.getSaldo()
 				+ "  Bonus recebido: " + (bonus - 1) * valor);
 
 	}
@@ -43,17 +43,17 @@ public class ContaPoupanca extends Conta {
 
 		this.setSaldo(this.getSaldo() + valor);
 
-		System.err.printf("Olá, " + getNomeCliente() + "! Seu saldo Atual na CONTA POUPANÇA: " + this.getSaldo());
+		System.err.printf("Olï¿½, " + getNomeCliente() + "! Seu saldo Atual na CONTA POUPANï¿½A: " + this.getSaldo());
 
 	}
 
 	@Override
 	void abrirConta() {
 
-		System.err.println(" CADASTRO DE NOVA CONTA POUPANÇA\nDigite o NOME do cliente: ");
+		System.err.println(" CADASTRO DE NOVA CONTA POUPANï¿½A\nDigite o NOME do cliente: ");
 		this.setNomeCliente(sc.nextLine());
 
-		this.setAgencia("1010-CP"); // Agencia possue número padrão
+		this.setAgencia("1010-CP"); // Agencia possue nï¿½mero padrï¿½o
 
 		this.setNumero(ContaCorrente.cont);
 
@@ -66,7 +66,7 @@ public class ContaPoupanca extends Conta {
 		if (this.getSaldo() >= 1) {
 
 			System.err.println(
-					"Não é possível encerrar a conta! Ainda existe saldo disponível. SALDO: " + this.getSaldo());
+					"Nï¿½o ï¿½ possï¿½vel encerrar a conta! Ainda existe saldo disponï¿½vel. SALDO: " + this.getSaldo());
 
 		} else {
 
